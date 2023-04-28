@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KQV-WS-yWa">
+    <device id="retina6_12" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="JjR-3J-UtW">
+            <objects>
+                <navigationController id="KQV-WS-yWa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AcE-Zt-jF5">
+                        <rect key="frame" x="0.0" y="59" width="852" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fI2-TH-kBg" kind="relationship" relationship="rootViewController" id="qKx-Zl-zc3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K7R-PW-Wyi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1362" y="-55"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="oVq-FR-YL5">
+            <objects>
+                <viewController id="fI2-TH-kBg" customClass="HomeViewController" customModule="Hung_Villa_FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T8X-ii-eLM">
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dogBG" translatesAutoresizingMaskIntoConstraints="NO" id="oip-Tn-J4c">
+                                <rect key="frame" x="0.0" y="-12" width="852" height="371"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vBt-AF-Dph">
+                                <rect key="frame" x="20" y="241" width="812" height="118"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Paw Facts" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jB-d3-9sE">
+                                <rect key="frame" x="20" y="121" width="812" height="65.333333333333314"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZh-DX-sNb">
+                                <rect key="frame" x="739" y="194" width="93" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Favorites"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="y3k-Rs-T6N"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2jB-d3-9sE" firstAttribute="top" secondItem="y3k-Rs-T6N" secondAttribute="top" constant="30" id="Btu-IN-iy0"/>
+                            <constraint firstItem="y3k-Rs-T6N" firstAttribute="bottom" secondItem="vBt-AF-Dph" secondAttribute="bottom" id="GL4-qK-W9y"/>
+                            <constraint firstItem="y3k-Rs-T6N" firstAttribute="trailing" secondItem="oip-Tn-J4c" secondAttribute="trailing" id="K4L-rU-O6E"/>
+                            <constraint firstItem="y3k-Rs-T6N" firstAttribute="trailing" secondItem="vBt-AF-Dph" secondAttribute="trailing" constant="20" id="Msz-Vg-HUd"/>
+                            <constraint firstItem="y3k-Rs-T6N" firstAttribute="top" secondItem="oip-Tn-J4c" secondAttribute="top" constant="103" id="RF4-0P-XrX"/>
+                            <constraint firstItem="vBt-AF-Dph" firstAttribute="leading" secondItem="y3k-Rs-T6N" secondAttribute="leading" constant="20" id="Tdz-sD-Tdj"/>
+                            <constraint firstItem="vBt-AF-Dph" firstAttribute="top" secondItem="AZh-DX-sNb" secondAttribute="bottom" constant="12" id="Whu-Ff-DbW"/>
+                            <constraint firstItem="y3k-Rs-T6N" firstAttribute="trailing" secondItem="2jB-d3-9sE" secondAttribute="trailing" constant="20" id="ZKC-Ep-3NK"/>
+                            <constraint firstItem="vBt-AF-Dph" firstAttribute="top" secondItem="y3k-Rs-T6N" secondAttribute="top" constant="150" id="hA5-sc-UUr"/>
+                            <constraint firstItem="AZh-DX-sNb" firstAttribute="top" secondItem="2jB-d3-9sE" secondAttribute="bottom" constant="7.6666666666666856" id="iBD-U5-Csg"/>
+                            <constraint firstItem="oip-Tn-J4c" firstAttribute="bottom" secondItem="y3k-Rs-T6N" secondAttribute="bottom" id="mTL-pg-eaD"/>
+                            <constraint firstItem="oip-Tn-J4c" firstAttribute="leading" secondItem="y3k-Rs-T6N" secondAttribute="leading" id="o7h-eR-nTX"/>
+                            <constraint firstItem="2jB-d3-9sE" firstAttribute="leading" secondItem="y3k-Rs-T6N" secondAttribute="leading" constant="20" id="tzm-ie-AHB"/>
+                            <constraint firstItem="AZh-DX-sNb" firstAttribute="leading" secondItem="oip-Tn-J4c" secondAttribute="trailing" constant="-113" id="xgk-IV-h6b"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zjp-Wa-CVR"/>
+                    <connections>
+                        <outlet property="favBtn" destination="AZh-DX-sNb" id="y1L-pm-QbF"/>
+                        <outlet property="tableView" destination="vBt-AF-Dph" id="JAL-GU-nCM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W7F-Ub-dkd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-465" y="-56"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dogBG" width="2000" height="2000"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
